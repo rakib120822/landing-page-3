@@ -2706,7 +2706,7 @@ button,
       { t: "Jurisdiction map", d: "Mandates and frameworks, country by country", href: "#map" },
       { t: "Latest policy updates", d: "New notices from regulators", href: "#updates" } ] },
     { label: "Datasets", items: [
-      { t: "Suppliers & producers", d: "Who supplies and produces biofuels, by region", soon: 1 },
+      { t: "Suppliers & producers", d: "Who supplies and produces biofuels, by region", href: "dataset.html" },
       { t: "Policy and market data", d: "Explore and download datasets", soon: 1 } ] },
     { label: "Products", items: [
       { t: "CI WorkSpace", d: "Save, compare and revisit your CI scenarios", soon: 1 },
@@ -2717,9 +2717,9 @@ button,
       { t: "Open roles", d: "Roles across the bioenergy sector", soon: 1 },
       { t: "Post a job", d: "Reach bioenergy professionals", soon: 1 } ] },
     { label: "About Us", items: [
-      { t: "What we do", d: "How the intelligence desk works", href: "#intelligence" },
-      { t: "Mission & vision", d: "Why we exist and where we're headed", href: "#intelligence" },
-      { t: "Team members", d: "The analysts and editors behind the briefs", soon: 1 },
+      { t: "What we do", d: "How the intelligence desk works", href: "about.html" },
+      { t: "Mission & vision", d: "Why we exist and where we're headed", href: "mission.html" },
+      { t: "Team members", d: "The analysts and editors behind the briefs", href: "team.html" },
       { t: "Contact us", d: "General and press enquiries", href: "mailto:hello@globalbioenergywatch.com" } ] }
   ];
   const SPY = { map: "Global Markets", updates: "Global Markets", markets: "Benchmarks", intelligence: "About Us" };
@@ -4033,7 +4033,7 @@ button,
       [['Ethanol', f[1]], ['Biodiesel / renewable diesel', f[2]], ['SAF / advanced fuels', f[3]], ['Key instruments', f[4]]].map(function (x) { return '<div class="jm-fact"><b>' + x[0] + '</b><span>' + esc(x[1]) + '</span></div>'; }).join('') +
       '</div><p class="jm-p-foot"><span>Regulator: <strong>' + esc(f[5]) + '</strong></span></p></div>' +
       '<div class="jm-m-foot"><span class="jm-m-note">Summary snapshot; confirm against official sources.</span>' +
-      '<a class="jm-readmore" href="#updates" data-n="' + esc(n) + '">Read more &rarr;</a></div>';
+      '<span><a class="jm-readmore" href="policy.html?c=' + encodeURIComponent(n) + '">Full policy profile &rarr;</a> <a class="jm-readmore" href="#updates" data-n="' + esc(n) + '">Updates &rarr;</a></span></div>';
     if (typeof modal.showModal === 'function') { if (!modal.open) modal.showModal(); } else modal.setAttribute('open', '');
   }
 
